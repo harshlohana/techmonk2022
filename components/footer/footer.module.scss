@@ -1,0 +1,24 @@
+@import "../../styles/function.scss";
+.site-footer {
+  padding-top: rem(50px);
+  padding-bottom: rem(50px);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.meta-text {
+  font-size: rem(10px);
+  line-height: rem(11px);
+  letter-spacing: 0.5em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: rem(20px);
+}
+.menu-item {
+  margin: 0 rem(8px);
+}
+.menu-link {
+  font-size: rem(14px);
+  line-height: rem(15px);
+  padding: rem(10px) rem(8px);
+}
+.menu {
+  margin: 0 rem(-16px);
+}
