@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+,  "animation/fade.js"],
   "exclude": [
     "node_modules"
   ]

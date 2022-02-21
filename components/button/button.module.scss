@@ -1,0 +1,9 @@
+@import "../../styles/function.scss";
+.btn {
+  transition: 0.2s all ease;
+  font-size: rem(14px);
+  line-height: rem(16px);
+  padding: rem(2px) rem(22px);
+  font-weight: 400;
+  min-height: rem(53px);
+}

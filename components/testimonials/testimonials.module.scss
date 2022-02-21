@@ -1,0 +1,38 @@
+@import "../../styles/function.scss";
+.card {
+  background-color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-size: cover;
+  min-height: em(406px);
+  border-radius: em(30px);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: em(50px);
+  background-image: url("./images/bg2.png");
+}
+.slide-box {
+  &:nth-child(odd) {
+    .card {
+      background-image: url("./images/bg1.png");
+    }
+  }
+}
+.desc,
+.name,
+.post {
+  letter-spacing: -0.03em;
+  line-height: 1.5em;
+}
+.desc {
+  font-size: em(26px);
+}
+.circle {
+  width: em(50px);
+  height: em(50px);
+}
+.name {
+  font-size: em(30px);
+}
+.post {
+  font-size: em(16px);
+}

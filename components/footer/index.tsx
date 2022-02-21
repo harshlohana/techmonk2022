@@ -3,6 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Logo from './images/logo.svg';
 import style from './footer.module.scss';
+import FadeInAnimation from '../../animation/fade';
 
 const Footer: React.FC<any> = (props: any) => {
 	const navigation = [
@@ -24,18 +25,21 @@ const Footer: React.FC<any> = (props: any) => {
 	]
 	return (
 		<>
-			<div className={cn(style['site-footer'], 'custom-container')}>
-				<div className='w-full grid grid-cols-1 items-end sm:grid-cols-12'>
+			<FadeInAnimation
+				wrapperElement="div"
+				className={cn(style['site-footer'], 'custom-container footer')}
+			>
+				<div className='w-full grid grid-cols-1 items-end sm:grid-cols-12 gap-x-6'>
 					<div className='sm:col-span-4 lg:col-span-5'>
-						<Link href="/home/">
-							<a className='inline-block'>
+						<Link href="/" >
+							<a className='inline-flex'>
 								<Image
 									src={Logo}
 									alt="Techmonk"
 								/>
 							</a>
 						</Link>
-						<p>
+						<p className={cn(style.info, 'font-2 mb-4')}>
 							We bring deep learning knowledge to the scope of marketing so that brands can optimize on their KPIs.
 						</p>
 					</div>
@@ -86,7 +90,7 @@ const Footer: React.FC<any> = (props: any) => {
 						</ul>
 					</div>
 				</div>
-			</div>
+			</FadeInAnimation>
 		</>
 	);
 };

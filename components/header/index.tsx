@@ -7,13 +7,22 @@ import Logo from './images/logo.svg';
 import Menubar from './images/bar.svg';
 import Close from './images/close.svg';
 import style from './header.module.scss';
+import FadeInAnimation from '../../animation/fade';
 
 const Header: React.FC<any> = (props: any) => {
 	const navigation = [
 		{ name: 'Blog', href: '#', current: true },
-		{ name: 'Team', href: '#', current: false },
+		{ name: 'Team', href: '/about/', current: false },
 		{ name: 'Case Studies', href: '#', current: false },
-		{ name: 'Blogs', href: '#', current: false },
+		{ name: 'Jobs', href: '#', current: false },
+	]
+	const mobilenavigation = [
+		{ name: 'Privacy Policy for Merchants', href: '#', current: false },
+		{ name: 'Terms of Service for Merchants', href: '#', current: false },
+		{ name: 'Copyright Policy', href: '#', current: false },
+		{ name: 'Data Processing Addendum', href: '#', current: false },
+		{ name: 'Terms of Service for end users', href: '#', current: false },
+		{ name: 'Privacy Policy for end users', href: '#', current: false },
 	]
 	const [MenuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = useCallback(
@@ -24,18 +33,50 @@ const Header: React.FC<any> = (props: any) => {
 	);
 	return (
 		<>
-			<div className={style['site-header']}>
+			<FadeInAnimation
+				wrapperElement="div"
+				direction="down"
+				className={style['site-header']}
+			>
 				<div>
 					<div className='flex justify-between items-center'>
-						<Link href="/home/">
-							<a className='inline-block'>
+						<Link href="/" >
+							<a className='inline-flex'>
 								<Image
 									src={Logo}
 									alt="Techmonk"
 								/>
 							</a>
 						</Link>
-						<div className={MenuOpen ? style.open : ''}>
+						<Button
+							className={cn('sm:hidden', style['menu-bar'])}
+							onClick={toggleMenu}
+						>
+							<Image
+								src={Menubar}
+								alt="Techmonk"
+							/>
+						</Button>
+						<div className={cn(MenuOpen ? style.open : '', style['mobile-header'])}>
+							<div className={cn(style['menu-header'], 'sm:hidden flex justify-between items-center')}>
+								<Link href="/">
+									<a className='inline-flex'>
+										<Image
+											src={Logo}
+											alt="Techmonk"
+										/>
+									</a>
+								</Link>
+								<Button
+									onClick={toggleMenu}
+									className={style['close-icon']}
+								>
+									<Image
+										src={Close}
+										alt="Techmonk"
+									/>
+								</Button>
+							</div>
 							<ul className={cn(style.menu, 'flex')}>
 								{navigation.map((item) => (
 									<li
@@ -54,29 +95,33 @@ const Header: React.FC<any> = (props: any) => {
 										</a>
 									</li>
 								))}
+								<li className={cn(style['meta-text'], 'uppercase font-medium')}>Legal</li>
+								<li className={style['hide-in-mobile']}>
+									<ul className={style['mobile-menu']}>
+										{mobilenavigation.map((item) => (
+											<li
+												key={item.name}
+												className={style['menu-item']}>
+												<a
+													key={item.name}
+													href={item.href}
+													className={cn(
+														item.current ? 'font-bold' : '', 'inline-block',
+														style['menu-link']
+													)}
+													aria-current={item.current ? 'page' : undefined}
+												>
+													{item.name}
+												</a>
+											</li>
+										))}
+									</ul>
+								</li>
 							</ul>
-							<Button
-								className={cn('sm:hidden', style['menu-bar'])}
-								onClick={toggleMenu}
-							>
-								<Image
-									src={Menubar}
-									alt="Techmonk"
-								/>
-							</Button>
-							<Button
-								onClick={toggleMenu}
-								className={cn('sm:hidden fixed top-0 right-0 p-3 flex items-center', style['close-icon'])}>
-								<Image
-									src={Close}
-									alt="Techmonk"
-								/>
-							</Button>
 						</div>
-
 					</div>
 				</div>
-			</div>
+			</FadeInAnimation>
 		</>
 	);
 };

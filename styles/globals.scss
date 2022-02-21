@@ -6,6 +6,7 @@
   --black: #000000;
   --bg-color: var(--black);
   --light-purple: #e5e0fb;
+  --yellow: #ffd029;
   --orange: #fe7825;
   --blue: #313cf8;
   --royal-blue: #3340f9;
@@ -52,7 +53,9 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.min-h-100vh {
+  min-height: 100vh;
+}
 //fonts
 @font-face {
   font-family: "Trap";
@@ -68,7 +71,21 @@ a {
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Trap";
+  src: url("../public/fonts/trap/trap-medium/Trap-Medium.eot");
+  src: url("../public/fonts/trap/trap-medium/Trap-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/trap/trap-medium/Trap-Medium.woff2") format("woff2"),
+    url("../public/fonts/trap/trap-medium/Trap-Medium.woff") format("woff"),
+    url("../public/fonts/trap/trap-medium/Trap-Medium.ttf") format("truetype"),
+    url("../public/fonts/trap/trap-medium/Trap-Medium.svg#Trap-Regular")
+      format("svg"),
+    url("../public/fonts/trap/trap-medium/Trap-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "Trap";
   src: url("../public/fonts/trap/trap-regular/Trap-Regular.eot");
@@ -80,7 +97,22 @@ a {
     url("../public/fonts/trap/trap-regular/Trap-Regular.svg#Trap-Regular")
       format("svg"),
     url("../public/fonts/trap/trap-regular/Trap-Regular.otf") format("opentype");
-  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Trap";
+  src: url("../public/fonts/trap/trap-light/Trap-Light.eot");
+  src: url("../public/fonts/trap/trap-light/Trap-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/trap/trap-light/Trap-Light.woff2") format("woff2"),
+    url("../public/fonts/trap/trap-light/Trap-Light.woff") format("woff"),
+    url("../public/fonts/trap/trap-light/Trap-Light.ttf") format("truetype"),
+    url("../public/fonts/trap/trap-light/Trap-Light.svg#Trap-Light")
+      format("svg"),
+    url("../public/fonts/trap/trap-light/Trap-Light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -139,7 +171,7 @@ h4,
   h1,
   .h1 {
     font-size: rem(40px);
-    line-height: rem(45px);
+    line-height: rem(44px);
   }
   h2,
   .h2 {
@@ -156,4 +188,107 @@ h4,
     font-size: rem(18px);
     line-height: rem(24px);
   }
+}
+//slider css
+.custom-slider {
+  .swiper {
+    padding-bottom: rem(100px);
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: rem(58px);
+    height: rem(58px);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    z-index: 11;
+    &:after {
+      content: "";
+      background-image: url("../components/testimonials/images/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: rem(17px);
+      height: rem(11px);
+    }
+  }
+  .swiper-button-prev {
+    margin-right: rem(78px);
+  }
+  .swiper-button-next {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+  .swiper-slide-active {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .custom-slider {
+    margin: 0 rem(-20px);
+    .swiper-slide {
+      font-size: 8px;
+    }
+    .swiper-slide-active {
+      font-size: 12px;
+    }
+    .swiper-button-next {
+      margin-right: rem(20px);
+    }
+    .swiper-button-prev {
+      margin-right: rem(98px);
+    }
+  }
+}
+
+@media (max-width: $sm-device) {
+  .custom-slider {
+    .swiper-slide,
+    .swiper-slide-active {
+      font-size: 8px;
+    }
+  }
+}
+
+//
+.has-scroll-smooth body,
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fade {
+  animation: fade 0.5s forwards ease;
+  opacity: 0;
+}
+.fadein {
+  animation: fadein 0.5s forwards ease;
+  opacity: 0;
+}
+.op-0 {
+  opacity: 0;
+}
+.delay {
+  animation-delay: 0.5s;
 }

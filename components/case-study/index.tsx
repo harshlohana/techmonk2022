@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
+import ScrollAnimation from "../../animation/scroll";
 import Case1 from './images/case-1.png';
 import Case2 from './images/case-2.png';
 import Case3 from './images/case-3.png';
-import Arrow from './images/left-arrow.svg';
 import style from './case.module.scss';
 
 const CaseStudy: React.FC<any> = (props: any) => {
@@ -34,10 +34,27 @@ const CaseStudy: React.FC<any> = (props: any) => {
 	return (
 		<>
 			<div className={cn(style['case-study-section'], 'custom-container')}>
-				<h3 className={cn(style.title, 'h1 sm:mb-20 mb-4 font-bold')}>Case Studies</h3>
-				<div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+				<ScrollAnimation
+					wrapperElement="h3"
+					toggleClass="fade"
+					start='top 400px'
+					end='+=100%'
+					pin='.section11'
+					className="delay section11 op-0 h1 sm:mb-20 mb-4 font-bold"
+				>
+					Case Studies
+				</ScrollAnimation>
+				<div className="mt-6 space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
 					{callouts.map((callout) => (
-						<div key={callout.id} className={cn(style['block-box'], 'group relative')}>
+						<ScrollAnimation
+							wrapperElement="div"
+							toggleClass="fade"
+							start='top 400px'
+							end='+=100%'
+							pin='.section12'
+							className={cn(style['block-box'], 'delay section12 op-0 group relative')}
+							key={callout.id}
+						>
 							<div className={cn(style.box, 'relative w-full overflow-hidden group-hover:opacity-75')}>
 								<Image
 									src={callout.imageSrc}
@@ -57,7 +74,7 @@ const CaseStudy: React.FC<any> = (props: any) => {
 									<svg className={style.arrow} id="img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M3.75 9h10.5M9 14.25 14.25 9 9 3.75" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>
 								</a>
 							</Link>
-						</div>
+						</ScrollAnimation>
 					))}
 				</div>
 			</div>

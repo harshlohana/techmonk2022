@@ -1,5 +1,6 @@
 import Link from 'next/link';
-
+import cn from 'classnames';
+import style from './button.module.scss';
 const Button: React.FC<any> = (props: any) => {
   const {
     children,
@@ -65,7 +66,7 @@ const Button: React.FC<any> = (props: any) => {
   }
   return (
     <button
-      className={classNames(className)}
+      className={cn(style.btn, classNames(className))}
       disabled={disabled}
       type={type || 'button'}
       onClick={onClick}

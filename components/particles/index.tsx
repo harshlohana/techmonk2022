@@ -75,10 +75,10 @@ const ParticlesWrapper: React.FC<any> = (props: any) => {
 							},
 							number: {
 								density: {
-									enable: false,
+									enable: true,
 									area: 800,
 								},
-								value: 120,
+								value: 40,
 							},
 							opacity: {
 								value: 0.5,
