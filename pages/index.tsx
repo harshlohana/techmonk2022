@@ -12,7 +12,7 @@ const Home: React.FC<any> = (props: any) => {
   return (
     <>
       <ParticlesWrapper>
-        <div className='scroller relative z-10 text-white flex flex-col min-h-100vh justify-between'>
+        <div className='relative z-10 text-white flex flex-col min-h-100vh justify-between'>
           <div className='custom-container'>
             <Header />
           </div>

@@ -39,7 +39,7 @@ const Content: React.FC<any> = (props: any) => {
 						className={cn(style['max-w-767'], 'section2 op-0 pt-10')}
 					>
 						<h3 className="font-bold">
-							This isn't just any other tech company taking open source data models to bring generic solutions to your business in the name of
+							This isn&apos;t just any other tech company taking open source data models to bring generic solutions to your business in the name of
 							“
 							<span className={style['gradient-text']}>Revolutionary AI</span>
 							”.

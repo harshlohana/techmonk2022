@@ -51,7 +51,7 @@ const Banner: React.FC<any> = (props: any) => {
 						distance={50}
 						className={cn(style.inst, 'font-2 sm:pb-0 pb-10 text-left sm:text-center')}
 					>
-						- Some marketing guy who doesn't understand the true potential of Deep Learning.
+						- Some marketing guy who doesn&apos;t understand the true potential of Deep Learning.
 					</FadeInAnimation>
 					<FadeInAnimation
 						wrapperElement="div"
@@ -61,12 +61,14 @@ const Banner: React.FC<any> = (props: any) => {
 						distance={50}
 					>
 						<p className={cn(style.inst2, 'font-2')}>True power of deep learning is intangible, especially when we combine it with marketing solutions.</p>
-						<a href="/" className='inline-block animate-bounce'>
-							<Image
-								src={Arrow}
-								alt="Techmonk"
-							/>
-						</a>
+						<Link href="/">
+							<a className='inline-block animate-bounce'>
+								<Image
+									src={Arrow}
+									alt="Techmonk"
+								/>
+							</a>
+						</Link>	
 					</FadeInAnimation>
 				</div>
 			</div>

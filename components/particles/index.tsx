@@ -14,8 +14,8 @@ const ParticlesWrapper: React.FC<any> = (props: any) => {
 			<div className={style['particles-wrapper']}>
 				<Particles
 					id="tsparticles"
-					init={particlesInit}
-					loaded={particlesLoaded}
+					// init={particlesInit}
+					// loaded={particlesLoaded}
 					options={{
 						background: {
 							color: {
