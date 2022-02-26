@@ -63,6 +63,20 @@
   text-transform: capitalize;
   font-weight: 500;
 }
+.image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 @media (max-width: $sm-device) {
   .title {
     font-size: rem(24px);

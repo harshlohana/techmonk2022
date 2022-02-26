@@ -7,7 +7,7 @@ import FadeInAnimation from '../../animation/fade';
 
 const Footer: React.FC<any> = (props: any) => {
 	const navigation = [
-		{ name: 'Blogs', href: '#', current: true },
+		{ name: 'Blogs', href: '/blog/', current: true },
 		{ name: 'Case Studies', href: '#', current: false },
 		{ name: 'Carrers', href: '#', current: false },
 		{ name: 'Get in touch', href: '#', current: false },

@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import cn from 'classnames';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Fuse from 'fuse.js';
-import { Data } from './data.js';
+import { Data } from './data';
 import ScrollAnimation from "../../animation/scroll";
-import FadeInAnimation from "../../animation/fade";
+import OnhoverEffect from '../../animation/onhover';
 import style from './blog.module.scss';
 import Input from '../input';
 import Search from './images/search.svg';
@@ -64,21 +65,28 @@ const Blog: React.FC<any> = (props: any) => {
 												start='top 700px'
 												end='+=100%'
 												pin='.section3'
-												key={key}
+												key={d.id}
 												id={`${d.title}${key}${idx}`}
-												className="op-0 section3"
+												className="op-0 section3 blog-item"
 											>
-												<Link href="/">
-													<a className={style.list}>
-														<p className={style.date}>
-															<span>{d.date}</span>
-															<span>- {d.author}</span>
-														</p>
-														<h2 className={style.title}>
-															{d.title}
-														</h2>
-													</a>
-												</Link>
+												<OnhoverEffect>
+													<Link href="/">
+														<a className={style.list}>
+															<img
+																src={d.img}
+																className={style.image}
+																alt="Techmonk"
+															/>
+															<p className={style.date}>
+																<span>{d.date}</span>
+																<span>- {d.author}</span>
+															</p>
+															<h2 className={style.title}>
+																{d.title}
+															</h2>
+														</a>
+													</Link>
+												</OnhoverEffect>
 											</ScrollAnimation>
 										))
 									}
