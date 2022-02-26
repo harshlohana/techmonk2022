@@ -3,6 +3,12 @@ import Image from 'next/image';
 import ScrollAnimation from "../../../animation/scroll";
 import ViewPortAnimation from "../../../animation/gsapvp";
 import Techmonk from './images/techmonk.svg';
+import Arrow from './images/arrow.svg';
+import Share from './images/share.svg';
+import Cac from './images/cac.svg';
+import Cpm from './images/cpm.svg';
+import Roas from './images/roas.svg';
+import Square from './images/square.svg';
 import style from './banner.module.scss';
 
 const Content: React.FC<any> = (props: any) => {
@@ -11,6 +17,65 @@ const Content: React.FC<any> = (props: any) => {
 			<div className={style['content-section']}>
 				<div className={cn(style['content-h'], 'section1 relative flex justify-between items-center flex-col text-center')}>
 					<div>
+						<ScrollAnimation
+							wrapperElement="div"
+							className={cn(style['display-in-mobile'], 'op-0')}
+							toggleClass="fade"
+							start='top 500px'
+							end='+=100%'
+							pin='.section1'
+						>
+							<div
+								className={cn(style.circle, style.circle1, 'flex justify-center items-center')}
+							>
+								<span className={cn(style['circle-i'], 'flex')}>
+									<Image
+										src={Share}
+										alt="Techmonk"
+									/>
+								</span>
+							</div>
+							<div
+								className={cn(style.circle, style.circle2, 'flex justify-center items-center')}
+							>
+								<span className={cn(style['circle-i'], 'flex')}>
+									<Image
+										src={Cac}
+										alt="Techmonk"
+									/>
+								</span>
+							</div>
+							<div
+								className={cn(style.circle, style.circle3, 'flex justify-center items-center')}
+							>
+								<span className={cn(style['circle-i'], 'flex')}>
+									<Image
+										src={Cpm}
+										alt="Techmonk"
+									/>
+								</span>
+							</div>
+							<div
+								className={cn(style.square, 'flex justify-center items-center')}
+							>
+								<span className={cn(style['circle-i'], 'flex')}>
+									<Image
+										src={Square}
+										alt="Techmonk"
+									/>
+								</span>
+							</div>
+							<div
+								className={cn(style.circle, style.circle4, 'flex justify-center items-center')}
+							>
+								<span className={cn(style['circle-i'], 'flex')}>
+									<Image
+										src={Roas}
+										alt="Techmonk"
+									/>
+								</span>
+							</div>
+						</ScrollAnimation>
 						<ScrollAnimation
 							wrapperElement="div"
 							className={cn(style.content, 'op-0')}

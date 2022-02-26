@@ -35,9 +35,9 @@ const OurProduct: React.FC<any> = (props: any) => {
 							</ScrollAnimation>
 						</div>
 
-						<div className='lg:block sm:grid lg:grid-cols-1 grid-cols-2 gap-x-6 lg:pl-10'>
+						<div className='lg:pl-10'>
 							<div
-								className={style.content}
+								className={cn(style.content, 'lg:block sm:grid sm:grid-cols-2 gap-x-6')}
 							>
 								<ScrollAnimation
 									wrapperElement="div"

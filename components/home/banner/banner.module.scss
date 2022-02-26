@@ -255,7 +255,8 @@
   .pt-300 {
     padding-top: rem(300px);
   }
-  .vector-h {
+  .vector-h,
+  .display-in-mobile {
     display: none;
   }
 }
@@ -272,6 +273,12 @@
   }
   .content-section {
     padding: rem(70px) 0;
+    .display-in-mobile {
+      max-width: rem(400px);
+      margin: 0 auto;
+      height: rem(50px);
+      position: relative;
+    }
     .circle {
       transform: scale(0.5);
     }
@@ -285,7 +292,7 @@
     }
     .square {
       margin: rem(-20px) rem(50px) 0 0;
-      transform: scale(0.6);
+      transform: scale(0.5) rotate(14deg);
     }
     .circle1 {
       margin: 0 0 0 rem(10px);
@@ -298,7 +305,7 @@
       margin: rem(-20px) 0 0 rem(-25px);
     }
     .circle4 {
-      margin: 0 rem(10px) 0 0;
+      margin: 0 rem(-6px) 0 0;
       transform-origin: right;
       .circle-i {
         transform: rotate(12deg);
