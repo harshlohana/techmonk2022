@@ -1,9 +1,5 @@
 import cn from 'classnames';
 import Button from '../button';
-import Image from 'next/image';
-import Team1 from './images/1.png';
-import Team2 from './images/2.png';
-import Team3 from './images/3.png';
 import style from './about.module.scss';
 import FadeInAnimation from '../../animation/fade';
 
