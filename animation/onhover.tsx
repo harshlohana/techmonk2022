@@ -25,7 +25,7 @@ const OnhoverEffect: React.FC<any> = (
 				})
 
 				el.addEventListener('mousemove', (e) => {
-					gsap.set(image, { x: e.offsetX - 200 })
+					gsap.set(image, { x: e.offsetX - 200, y: e.offsetY - 50 })
 				})
 			})
 		},

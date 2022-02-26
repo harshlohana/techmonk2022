@@ -29,7 +29,7 @@ const ScrollAnimation: React.FC<any> = (
 				{
 					scrollTrigger: {
 						trigger: scrollRef.current,
-						start: 'top 500px',
+						start: 'center 500px',
 						end: '+=100%',
 						pin: '.scroller',
 						scrub: 0.1,

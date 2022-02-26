@@ -2,7 +2,6 @@
 import cn from 'classnames';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Fuse from 'fuse.js';
 import { Data } from './data';
 import ScrollAnimation from "../../animation/scroll";
@@ -70,7 +69,7 @@ const Blog: React.FC<any> = (props: any) => {
 												className="op-0 section3 blog-item"
 											>
 												<OnhoverEffect>
-													<Link href="/">
+													<Link href="/single-blog/">
 														<a className={style.list}>
 															<img
 																src={d.img}

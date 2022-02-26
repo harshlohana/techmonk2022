@@ -4,6 +4,7 @@
   --font-family2: "General Sans", sans-serif;
   --white: #ffffff;
   --black: #000000;
+  --dark-gray: #121212;
   --bg-color: var(--black);
   --light-purple: #e5e0fb;
   --yellow: #ffd029;
@@ -23,6 +24,8 @@
   --h3-line-height: #{rem(52px)};
   --h4-size: #{rem(24px)};
   --h4-line-height: #{rem(36px)};
+  --h5-size: #{rem(20px)};
+  --h5-line-height: #{rem(22px)};
 }
 html {
   scroll-behavior: smooth;
@@ -167,6 +170,11 @@ h4,
   font-size: var(--h4-size);
   line-height: var(--h4-line-height);
 }
+h5,
+.h5 {
+  font-size: var(--h5-size);
+  line-height: var(--h5-line-height);
+}
 @media (max-width: $sm-device) {
   h1,
   .h1 {
@@ -223,33 +231,15 @@ h4,
       transform: rotate(180deg);
     }
   }
-  .swiper-slide-active {
-    font-size: 10px;
-  }
 }
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
   .custom-slider {
     margin: 0 rem(-20px);
-    .swiper-slide {
-      font-size: 8px;
-    }
-    .swiper-slide-active {
-      font-size: 12px;
-    }
     .swiper-button-next {
       margin-right: rem(20px);
     }
     .swiper-button-prev {
       margin-right: rem(98px);
-    }
-  }
-}
-
-@media (max-width: $sm-device) {
-  .custom-slider {
-    .swiper-slide,
-    .swiper-slide-active {
-      font-size: 8px;
     }
   }
 }

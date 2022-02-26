@@ -18,7 +18,7 @@ const Card: React.FC<any> = ({
 				start='top 400px'
 				end='+=100%'
 				pin='.section10'
-				className={cn(style.card, 'delay section10 op-0 text-black flex justify-between flex-col')}
+				className={cn(style.card, 'section10 op-0 text-black flex justify-between flex-col')}
 			>
 				<p className={style.desc}>
 					{desc}

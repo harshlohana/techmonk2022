@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ScrollAnimation from "../../../animation/scroll";
 import ViewPortAnimation from "../../../animation/gsapvp";
 import Techmonk from './images/techmonk.svg';
-import Arrow from './images/arrow.svg';
 import Share from './images/share.svg';
 import Cac from './images/cac.svg';
 import Cpm from './images/cpm.svg';

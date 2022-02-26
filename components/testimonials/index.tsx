@@ -45,7 +45,7 @@ const Testimonials: React.FC<any> = (props: any) => {
 						start='top 400px'
 						end='+=100%'
 						pin='.section9'
-						className="delay section9 op-0 h1 sm:mb-20 mb-4 font-bold"
+						className="section9 op-0 h1 sm:mb-20 mb-4 font-bold"
 					>
 						Testimonials
 					</ScrollAnimation>

@@ -1,8 +1,4 @@
 import Image1 from './images/1.png';
-import Image2 from '../about/images/1.png';
-import Image3 from '../about/images/2.png';
-import Image4 from '../about/images/3.png';
-import Image5 from '../about/images/1.png';
 export const Data = [{
 	typelist: [
 		{

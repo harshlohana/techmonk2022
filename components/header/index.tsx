@@ -38,7 +38,7 @@ const Header: React.FC<any> = (props: any) => {
 				direction="down"
 				className={style['site-header']}
 			>
-				<div>
+				<div className='custom-container'>
 					<div className='flex justify-between items-center'>
 						<Link href="/">
 							<a className='inline-flex'>
