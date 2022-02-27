@@ -54,7 +54,7 @@
   line-height: rem(36px);
   text-transform: capitalize;
   font-weight: 400;
-  margin-bottom: rem(24px);
+  padding-bottom: rem(24px);
 }
 .title {
   font-size: rem(50px);
@@ -68,7 +68,7 @@
   width: 50%;
   height: 100%;
   object-fit: cover;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   z-index: -10;
@@ -130,7 +130,6 @@
 }
 .section-img {
   margin: 0 rem(-20px);
-  min-height: rem(490px);
 }
 .related-post {
   background-color: var(--dark-gray);
@@ -210,5 +209,8 @@
     width: rem(400px);
     height: rem(400px);
     margin: rem(230px) 0 0 rem(-200px);
+  }
+  .content {
+    padding-bottom: rem(75px);
   }
 }

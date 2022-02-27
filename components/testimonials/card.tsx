@@ -15,7 +15,7 @@ const Card: React.FC<any> = ({
 			<ScrollAnimation
 				wrapperElement="div"
 				toggleClass="fade"
-				start='top 400px'
+				start='top 700px'
 				end='+=100%'
 				pin='.section10'
 				className={cn(style.card, 'section10 op-0 text-black flex justify-between flex-col')}

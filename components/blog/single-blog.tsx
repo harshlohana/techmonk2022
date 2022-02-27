@@ -6,7 +6,6 @@ import ScrollAnimation from "../../animation/scroll";
 import Banner from './images/banner.png';
 import Avatar from './images/avatar.png';
 import Img1 from './images/1.png';
-import Share from './images/share.svg';
 import style from './blog.module.scss';
 import Button from '../button';
 
@@ -24,11 +23,11 @@ const SingleBlog: React.FC<any> = () => {
 					alt="Techmonk"
 				/>
 			</ScrollAnimation>
-			<div className={cn(style['banner-content'], style.content, 'section2 mx-auto text-center custom-container')}>
+			<div className={cn(style['banner-content'], style.content, 'px-0 section2 mx-auto text-center custom-container')}>
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'mx-auto op-0 pt-10')}
@@ -53,7 +52,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'text-left mx-auto op-0 pt-10')}
@@ -65,7 +64,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'mx-auto op-0 pt-20')}
@@ -77,7 +76,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'text-left mx-auto op-0 pt-10')}
@@ -89,7 +88,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'text-left mx-auto op-0 pt-10')}
@@ -117,7 +116,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section3'
 					className={cn(style['max-w-854'], 'mx-auto op-0 pt-20')}
@@ -129,7 +128,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section3'
 					className={cn(style['max-w-854'], 'text-left mx-auto op-0 pt-10')}
@@ -141,7 +140,7 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], 'text-left mx-auto op-0 pt-10')}
@@ -153,12 +152,12 @@ const SingleBlog: React.FC<any> = () => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 500px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section2'
 					className={cn(style['max-w-854'], style['share-section'], 'text-left mx-auto op-0 pt-10 mt-20 flex flex-wrap justify-between')}
 				>
-					<div className="flex items-center">
+					<div className="flex items-center pt-4">
 						<div className={cn(style['circle-70'], 'flex-shrink-0')}>
 							<Image
 								className={cn(style['circle-70'], 'rounded-full')}
@@ -175,7 +174,7 @@ const SingleBlog: React.FC<any> = () => {
 							</div>
 						</div>
 					</div>
-					<div>
+					<div className='pt-4'>
 						<Button className={cn(style['btn-share'], 'bg-transparent hover:bg-white text-white hover:text-black border border-white-500 hover:border-transparent rounded-full transition-all flex items-center justify-center text-center')}>
 							<svg className="h-4 w-4" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 								<path d="M12 5.333a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM4 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM12 14.667a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM5.727 9.007l4.553 2.653M10.273 4.34 5.727 6.993" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />

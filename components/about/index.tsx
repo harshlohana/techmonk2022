@@ -8,7 +8,7 @@ const AboutTop: React.FC<any> = (props: any) => {
 		<>
 			<div className="py-10 relative">
 				<div className='custom-container'>
-					<div className='flex flex-wrap'>
+					<div className='flex flex-wrap items-center py-10'>
 						<div className='w-full sm:w-1/2 sm:pr-4'>
 							<FadeInAnimation
 								wrapperElement="h2"

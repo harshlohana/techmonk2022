@@ -37,7 +37,7 @@ const CaseStudy: React.FC<any> = (props: any) => {
 				<ScrollAnimation
 					wrapperElement="h3"
 					toggleClass="fade"
-					start='top 400px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section11'
 					className="section11 op-0 h1 sm:mb-20 mb-4 font-bold"
@@ -49,7 +49,7 @@ const CaseStudy: React.FC<any> = (props: any) => {
 						<ScrollAnimation
 							wrapperElement="div"
 							toggleClass="fade"
-							start='top 400px'
+							start='top 700px'
 							end='+=100%'
 							pin='.section12'
 							className={cn(style['block-box'], 'section12 op-0 group relative')}

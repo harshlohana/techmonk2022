@@ -10,6 +10,8 @@ import Square from './images/square.svg';
 import style from './banner.module.scss';
 import FadeInAnimation from "../../../animation/fade";
 import TimelineAnimation from "../../../animation/timeline";
+//import SmoothScroll from "../../../animation/smoothscroll";
+import Button from '../../button';
 
 
 const Banner: React.FC<any> = (props: any) => {
@@ -61,14 +63,14 @@ const Banner: React.FC<any> = (props: any) => {
 						distance={50}
 					>
 						<p className={cn(style.inst2, 'font-2')}>True power of deep learning is intangible, especially when we combine it with marketing solutions.</p>
-						<Link href="/">
-							<a className='inline-block animate-bounce'>
+						<Link href='#product-section'>
+							<a className="inline-block animate-bounce smooth-arrow">
 								<Image
 									src={Arrow}
 									alt="Techmonk"
 								/>
 							</a>
-						</Link>	
+						</Link>
 					</FadeInAnimation>
 				</div>
 			</div>

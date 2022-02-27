@@ -17,15 +17,15 @@ const OnhoverEffect: React.FC<any> = (
 				const image = el.querySelector('img')
 
 				el.addEventListener('mouseenter', (e) => {
-					gsap.to(image, { autoAlpha: 1 })
+					gsap.to(image, { autoAlpha: 1, ease: 'Power0.easeOut' })
 				})
 
 				el.addEventListener('mouseleave', (e) => {
-					gsap.to(image, { autoAlpha: 0 })
+					gsap.to(image, { autoAlpha: 0, ease: 'Power0.easeOut' })
 				})
 
 				el.addEventListener('mousemove', (e) => {
-					gsap.set(image, { x: e.offsetX - 200, y: e.offsetY - 50 })
+					gsap.set(image, { x: e.offsetX - 200, y: e.offsetY - 200 })
 				})
 			})
 		},

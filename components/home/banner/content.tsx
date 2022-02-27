@@ -97,7 +97,7 @@ const Content: React.FC<any> = (props: any) => {
 					<ScrollAnimation
 						wrapperElement="div"
 						toggleClass="fade"
-						start='top 700px'
+						start='center 500px'
 						end='+=100%'
 						pin='.section2'
 						className={cn(style['max-w-767'], 'section2 op-0 pt-10')}
@@ -113,7 +113,7 @@ const Content: React.FC<any> = (props: any) => {
 				<ScrollAnimation
 					wrapperElement="div"
 					toggleClass="fade"
-					start='top 700px'
+					start='center 500px'
 					end='+=100%'
 					pin='.section3'
 					className={cn(style['max-w-636'], style['pt-300'], 'section3 op-0 pt-10 flex justify-between items-center text-center')}

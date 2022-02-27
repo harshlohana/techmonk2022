@@ -5,14 +5,14 @@ import style from './product.module.scss';
 const OurProduct: React.FC<any> = (props: any) => {
 	return (
 		<>
-			<div className={cn(style['product-section'], 'py-10')}>
+			<div className={cn(style['product-section'], 'py-10')} id="product-section">
 				<div className='custom-container'>
 					<div className='section5 lg:grid lg:grid-cols-2 lg:gap-x-6'>
 						<div className={style.content}>
 							<ScrollAnimation
 								wrapperElement="h3"
 								toggleClass="fade"
-								start='top 400px'
+								start='top 700px'
 								end='+=100%'
 								pin='.section5'
 								className={cn(style.title, 'op-0 mb-4')}
@@ -22,7 +22,7 @@ const OurProduct: React.FC<any> = (props: any) => {
 							<ScrollAnimation
 								wrapperElement="div"
 								toggleClass="fade"
-								start='top 400px'
+								start='top 700px'
 								end='+=100%'
 								pin='.section5'
 								className="op-0"
@@ -41,7 +41,7 @@ const OurProduct: React.FC<any> = (props: any) => {
 								<ScrollAnimation
 									wrapperElement="div"
 									toggleClass="fade"
-									start='top 400px'
+									start='top 700px'
 									end='+=100%'
 									pin='.section5'
 									className={cn(style['bg-1'], 'op-0 w-full flex items-end')}
@@ -58,7 +58,7 @@ const OurProduct: React.FC<any> = (props: any) => {
 								<ScrollAnimation
 									wrapperElement="div"
 									toggleClass="fade"
-									start='top 400px'
+									start='top 700px'
 									end='+=100%'
 									pin='.section5'
 									className={cn(style['bg-2'], 'op-0 w-full flex items-end relative')}
