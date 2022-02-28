@@ -40,11 +40,11 @@ const TimelineAnimation: React.FC<any> = (
 				},
 			);
 		}
-		// return () => {
-		// 	if (tween) {
-		// 		tween.kill();
-		// 	}
-		// };
+		return () => {
+			if (tween) {
+				tween.kill();
+			}
+		};
 	}, [divRef, toggleClass, delay, duration]);
 	return (
 		<Component ref={divRef} {...props}>

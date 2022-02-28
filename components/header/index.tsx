@@ -11,7 +11,7 @@ import FadeInAnimation from '../../animation/fade';
 
 const Header: React.FC<any> = (props: any) => {
 	const navigation = [
-		{ name: 'Blog', href: '#', current: true },
+		{ name: 'Blog', href: '/blog/', current: true },
 		{ name: 'Team', href: '/about/', current: false },
 		{ name: 'Case Studies', href: '#', current: false },
 		{ name: 'Jobs', href: '#', current: false },
@@ -38,9 +38,9 @@ const Header: React.FC<any> = (props: any) => {
 				direction="down"
 				className={style['site-header']}
 			>
-				<div>
+				<div className='custom-container'>
 					<div className='flex justify-between items-center'>
-						<Link href="/" >
+						<Link href="/">
 							<a className='inline-flex'>
 								<Image
 									src={Logo}

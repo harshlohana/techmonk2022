@@ -21,7 +21,6 @@ const FadeInAnimation: React.FC<any> = (
   let compRef = useRef<null | HTMLDivElement>(null);
   // const distance = 200;
   let fadeDirection: any;
-  const [Active, setActive] = useState(false);
   switch (direction) {
     case "left":
       fadeDirection = { x: -distance };

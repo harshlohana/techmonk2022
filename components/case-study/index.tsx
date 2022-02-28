@@ -37,10 +37,10 @@ const CaseStudy: React.FC<any> = (props: any) => {
 				<ScrollAnimation
 					wrapperElement="h3"
 					toggleClass="fade"
-					start='top 400px'
+					start='top 700px'
 					end='+=100%'
 					pin='.section11'
-					className="delay section11 op-0 h1 sm:mb-20 mb-4 font-bold"
+					className="section11 op-0 h1 sm:mb-20 mb-4 font-bold"
 				>
 					Case Studies
 				</ScrollAnimation>
@@ -49,10 +49,10 @@ const CaseStudy: React.FC<any> = (props: any) => {
 						<ScrollAnimation
 							wrapperElement="div"
 							toggleClass="fade"
-							start='top 400px'
+							start='top 700px'
 							end='+=100%'
 							pin='.section12'
-							className={cn(style['block-box'], 'delay section12 op-0 group relative')}
+							className={cn(style['block-box'], 'section12 op-0 group relative')}
 							key={callout.id}
 						>
 							<div className={cn(style.box, 'relative w-full overflow-hidden group-hover:opacity-75')}>

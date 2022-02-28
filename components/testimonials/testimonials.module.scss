@@ -12,6 +12,7 @@
 }
 .slide-box {
   &:nth-child(odd) {
+    font-size: 10px;
     .card {
       background-image: url("./images/bg1.png");
     }
@@ -35,4 +36,19 @@
 }
 .post {
   font-size: em(16px);
+}
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .slide-box {
+    &:nth-child(odd) {
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: $sm-device) {
+  .slide-box {
+    font-size: 8px;
+    &:nth-child(odd) {
+      font-size: 8px;
+    }
+  }
 }

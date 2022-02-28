@@ -1,9 +1,5 @@
 import cn from 'classnames';
 import Button from '../button';
-import Image from 'next/image';
-import Team1 from './images/1.png';
-import Team2 from './images/2.png';
-import Team3 from './images/3.png';
 import style from './about.module.scss';
 import FadeInAnimation from '../../animation/fade';
 
@@ -12,7 +8,7 @@ const AboutTop: React.FC<any> = (props: any) => {
 		<>
 			<div className="py-10 relative">
 				<div className='custom-container'>
-					<div className='flex flex-wrap'>
+					<div className='flex flex-wrap items-center py-10'>
 						<div className='w-full sm:w-1/2 sm:pr-4'>
 							<FadeInAnimation
 								wrapperElement="h2"
